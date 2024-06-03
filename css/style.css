@@ -1,0 +1,11 @@
+/*=========메인 페이지 시작=========*/
+/* .img-gp-main {
+    display: flex;
+    justify-content: center;
+} */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*=========메인 페이지 끝=========*/

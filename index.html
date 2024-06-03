@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>테스트</title>
+    <link rel="icon" type="images/png" href="/asset/icon.png">
+    <title>테스트 페이지에용</title>
+    <link rel="stylesheet" href="/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <!-- <script src="/js/script.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <h1>바보</h1>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPC9HDZQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- <span class="img-gp-main">
+            <img src="/asset/main/img_gp_main.png" alt="">
+        </span> -->
+        <div id="move-productpage">
+            <span class="center">
+                <img src="/asset/main/img_recommendation.png" alt="">
+            </span>
+            <span class="center">
+                하이하이 !!
+            </span>
+        </div>
+    </div>
+
+    <div id="nav"></div>
 </body>
+
+<script>
+    $(function(){
+        $("#header").load("/html/component/header.html", function(){
+        });
+        $("#nav").load("/html/component/nav.html", function(){
+            var moveMyPage = document.getElementById("move-home");
+            moveMyPage.src = "/asset/icon/ic_home2.png";
+        });
+    });
+</script>
 </html>
