@@ -1,24 +1,31 @@
 /*=========초기세팅 시작=========*/
 /*====헤더====*/
-header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 6vh;
-    background-color: white;
-    border-bottom: 1px solid #939393;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
 }
 
 #logo {
     position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    height: 80%;
+    left: 1.5%;
+    top: 15%;
+    height: 70%;
     width: auto;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    font-family: '궁서체', 'Gungsuh', serif;
+    font-weight: bold;
 }
-#modal {
+
+#hambuger-button {
     position: absolute;
     right: 1.5%;
     top: 15%;
@@ -26,8 +33,145 @@ header {
     width: auto;
 }
 
+/* 모달 */
+/*팝업 배경*/
+.modal {
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(155, 106, 106, 0.99);
+    color: white;
+    z-index: 100;
+}
+/*팝업*/
+.modal .modal_popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: auto;
+    height: auto;
+    
+    max-width: 90vw;
+    max-height: 90vh;
+
+    text-align: center;
+}
+
+/*====푸터====*/
+#footer {
+}
+
+.footer-payment {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 70vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    background-color: rgb(237, 237, 237);
+    color: black;
+}
+
+.footer-map {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 70vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+    align-items: center;
+    
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.footer-info {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 70vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+    align-items: center;
+    
+    background-color: rgb(237, 237, 237);
+    color: black;
+}
+
+.footer-content {
+    width: 100vw;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background-color: rgb(133, 133, 133);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
 /*====네비게이션====*/
-nav {
+#nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+}
+
+/* 윗 부분 */
+#nav-content {
+    position: fixed;
+    bottom: 6vh;
+    left: 0;
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+#nav-content span {
+    text-align: center;
+}
+
+#nav-content-visitnumber {
+    width: 50vw;
+    font-size: 12px;
+    font-weight: 800;
+}
+.nav-content-icon1 {
+    width: 16.6vw;
+}
+.nav-content-icon2 {
+    width: 16.6vw;
+}
+.nav-content-icon3 {
+    width: 16.6vw;
+}
+
+/* 공지 사항 */
+#nav-notice {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -36,43 +180,33 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
-    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(246, 246, 246);
 }
 
-#move-cart {
-    height: 70%;
-    width: auto;
+#nav-notice span {
+    text-align: center;
 }
 
-#move-home {
-    height: 70%;
-    width: auto;
+#notice-page {
+    width: 10vw;
 }
+.notice-arrow-left {
+    width: 10vw;
 
-#move-mypage {
-    height: 70%;
-    width: auto;
 }
-
+#notice-contents {
+    width: 70vw;
+}
+.notice-arrow-right {
+    width: 10vw;
+}
 /*====바디====*/
 body {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 100vw;
-    padding-top: 6%;
-    padding-bottom: 6%;
-    height:88%;
-}
-
-.area {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    border-bottom: 1px solid #EEEEEE;
-
+    padding-bottom: 12vh;
 }
 /*=========초기세팅 끝=========*/

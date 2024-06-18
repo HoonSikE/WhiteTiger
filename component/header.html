@@ -1,0 +1,58 @@
+<div id="header">
+    <div id="header-content">
+        <div>
+            <span id="logo">GIL DONG & YU RI</span>
+        </div>
+        <div>
+            <img id="hambuger-button" onclick="modal()" src="/asset/icon/ic_bar.png" alt=""/>
+        </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="modal" class="modal">
+        <div class="modal_popup">
+            INVITE YOU | 인사말<br><br>
+            INTERVIEW | 인터뷰<br><br>
+            WEDDING DAY | 웨딩 데이<br><br>
+            GALLERY | 웨딩 갤러리<br><br>
+            INFORMATION | 예식정보<br><br>
+            GUESTBOOK | 한 줄 메세지&참석 여부<br><br>
+            CONTACT | 전화걸기<br><br>
+            FOR YOUR HEART | 마음 전하실 곳<br><br>
+            LOCATION | 오시는 길<br><br>
+            THANKS TO | 감사 인사
+        </div>
+        <!-- <img class="modal_popup" src="/asset/main/img_gp_modal.png" alt=""> -->
+    </div>
+</div>
+<script>
+    var headerContent = document.getElementById('header-content');
+    headerContent.style.display = "none";
+
+    window.addEventListener('scroll', function() {
+        var scrollPositionVh = (window.scrollY / window.innerHeight) * 100; // 스크롤 위치를 vh 단위로 계산합니다
+
+        // 스크롤 위치가 6vh를 넘으면 동작을 수행합니다
+        if (scrollPositionVh >= 6) {
+            headerContent.style.display = "block";
+        }else{
+            headerContent.style.display = "none";
+        }
+    });
+
+    function modal(){
+        var modal = document.getElementById('modal');
+
+        if (modal.style.display === "none") {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    }
+
+    // 모달 닫기 버튼 클릭 시
+    document.querySelector('#modal').addEventListener('click', function() {
+        var modal = document.getElementById('modal');
+        modal.style.display = "none";
+    });
+</script>

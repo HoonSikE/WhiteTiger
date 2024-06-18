@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="images/png" href="/asset/icon.png">
-    <title>테스트 페이지에용</title>
+    <link rel="icon" type="images/png" href="/asset/logo.png">
+    <title>테스트 페이지</title>
     <link rel="stylesheet" href="/css/base.css" type="text/css" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
-    <!-- <script src="/js/script.js"></script> -->
+    <script src="/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPC9HDZQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <div id="header"></div>
+    <header id="header-component"></header>
 
     <div class="container">
-        <!-- <span class="img-gp-main">
-            <img src="/asset/main/img_gp_main.png" alt="">
-        </span> -->
-        <div id="move-productpage">
-            <span class="center">
-                <img src="/asset/main/img_recommendation.png" alt="">
-            </span>
-            <span class="center">
-                하이하이 !!
-            </span>
+        <div class="center">
+            <img class="img-wedding" src="/asset/main/img_wedding.png" alt="">
         </div>
+        <div class="center">
+            소중한 분들을 초대합니다.<br><br>
+            사랑이 무엇인지<br>
+            누군가 물어왔을 때<br><br>
+            순간의 망설임도 없이<br>
+            서로를 떠올리던 그 마음으로<br><br>
+            저희 둘, 결혼합니다.<br>
+
+            OOO OOO님의 차남 OO
+            OOO OOO님의 장녀 OO
+        </div>
+        <div class="center" style="background-color:antiquewhite">
+            달력
+        </div>
+        <div class="center">
+            사진
+        </div>
+        <div id="footer-component"></div>
     </div>
 
-    <div id="nav"></div>
+    <nav id="nav-component"></nav>
+
+    <!-- <footer id="footer-componentr"></footer> -->
 </body>
 
 <script>
     $(function(){
-        $("#header").load("/html/component/header.html", function(){
+        $("#header-component").load("/component/header.html", function(){
         });
-        $("#nav").load("/html/component/nav.html", function(){
-            var moveMyPage = document.getElementById("move-home");
-            moveMyPage.src = "/asset/icon/ic_home2.png";
+        $("#nav-component").load("/component/nav.html", function(){
+        });
+        $("#footer-component").load("/component/footer.html", function(){
         });
     });
 </script>
